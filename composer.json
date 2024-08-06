@@ -2,7 +2,7 @@
     "name": "iexbase/tron-api",
     "description": "A PHP API for interacting with Tron (Trx)",
     "license": "MIT",
-    "type":   "library",
+    "type": "library",
     "homepage": "https://github.com/iexbase/tron-api",
     "authors": [
         {
@@ -17,37 +17,38 @@
         "tron-api",
         "tron-rest-api"
     ],
-
     "require": {
-        "php": ">=8.0",
-        "comely-io/data-types": "^1.0",
-        "guzzlehttp/guzzle": "^7.2",
-        "iexbase/web3.php": "^2.0.1",
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.8",
+        "xqq/web3.php": "dev-master",
         "kornrunner/secp256k1": "^0.2",
         "simplito/elliptic-php": "^1.0",
         "ext-json": "*",
-        "ext-bcmath": "*"
+        "ext-bcmath": "*",
+        "phpseclib/phpseclib": "^3.0"
     },
-
     "require-dev": {
-        "phpunit/phpunit": "^6.0"
+         "phpunit/phpunit": "^9.0"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/wqjohnston/web3.php"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "IEXBase\\TronAPI\\": "src"
         }
     },
-
     "autoload-dev": {
         "psr-4": {
             "IEXBase\\TronAPI\\Test\\": "tests"
         }
     },
-
     "config": {
         "sort-packages": true
     },
-
     "minimum-stability": "dev",
     "prefer-stable": true
 }
